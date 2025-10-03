@@ -98,7 +98,7 @@ def main():
         st.session_state["chat"] = []
 
     if "messages" not in st.session_state:
-        st.session_state["messages"] = [{"role": "system", "content": "You are a thoughtful assistant. Respond to all input in 1000 words and answer in korea. "}]
+        st.session_state["messages"] = [{"role": "system", "content": "You are a thoughtful assistant. Respond to all input in 250 words and answer in korea. "}]
 
     if "check_reset" not in st.session_state:
         st.session_state["check_reset"] = False
@@ -115,7 +115,8 @@ def main():
     with st.sidebar:
 
         # API 키를 환경 변수에서 가져오기 (사용자 요청 사항 반영)
-        API_KEY = os.environ.get("OPENAI_API_KEY")
+        '''API_KEY = os.environ.get("OPENAI_API_KEY")'''
+        API_KEY = "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"
 
         if API_KEY:
             try:
@@ -226,3 +227,4 @@ def main():
 
 if __name__=="__main__":
     main()
+
